@@ -41,6 +41,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    userId = event.source.userId
+    print(userId)
     try:
         if msg == "功能":
             line_bot_api.reply_message(event.reply_token, 
@@ -62,7 +64,7 @@ def handle_message(event):
                     )
                 )
             )
-        elif msg == "日歷":
+        elif msg == "日曆":
             line_bot_api.reply_message(event.reply_token, TextSendMessage("https://17c1-114-38-3-32.ngrok-free.app"))
         else:
             print(msg)
