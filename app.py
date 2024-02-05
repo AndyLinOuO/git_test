@@ -63,7 +63,7 @@ def handle_message(event):
                 )
             )
         elif msg == "日歷":
-            line_bot_api.reply_message(event.reply_token, TextSendMessage("123"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage("https://17c1-114-38-3-32.ngrok-free.app"))
         else:
             print(msg)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(msg))
